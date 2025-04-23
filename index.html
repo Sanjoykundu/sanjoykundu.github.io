@@ -226,7 +226,7 @@ a:active {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            scroll-behavior: smooth; /* Smooth scrolling */
+            scroll-behavior: smooth;
         }
         .navbar {
             position: fixed;
@@ -250,13 +250,28 @@ a:active {
         .container {
             max-width: 900px;
             margin: auto;
-            padding-top: 60px; /* Adjust for fixed navbar */
+            padding-top: 100px; /* More padding for the new header */
+            text-align: center;
+        }
+        .header-name {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #0073b1;
+            margin-bottom: 20px;
         }
         .section {
             margin: 50px 0;
             padding: 20px;
             border-radius: 5px;
             background: #f4f4f4;
+            text-align: left;
         }
         .section-title {
             font-size: 24px;
@@ -269,7 +284,6 @@ a:active {
 </head>
 <body>
 
-
     <div class="navbar">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
@@ -278,11 +292,18 @@ a:active {
         <a href="#contact">Contact</a>
     </div>
 
-
     <div class="container">
-        <div id="About Me" class="section">
+        <div class="header-name">Sanjoy Kundu</div>
+        <img src="Files/profile.jpg" alt="Sanjoy Kundu" class="profile-photo">
+
+        <div id="about" class="section">
             <div class="section-title">About Me</div>
             <p>PhD Candidate at Auburn University working on video event understanding and scene graph generation.</p>
+        </div>
+
+        <div id="projects" class="section">
+            <div class="section-title">Projects</div>
+            <p>Coming soon...</p>
         </div>
 
         <div id="publications" class="section">
