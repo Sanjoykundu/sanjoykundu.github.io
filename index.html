@@ -214,7 +214,6 @@ a:active {
 </html> -->
 
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -248,13 +247,19 @@ a:active {
             border-radius: 5px;
         }
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: auto;
-            padding-top: 100px; /* More padding for the new header */
-            text-align: center;
+            padding-top: 100px;
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+        }
+        .sidebar {
+            width: 250px;
+            text-align: left;
         }
         .header-name {
-            font-size: 36px;
+            font-size: 28px;
             font-weight: bold;
             margin-bottom: 10px;
         }
@@ -264,7 +269,19 @@ a:active {
             object-fit: cover;
             border-radius: 50%;
             border: 3px solid #0073b1;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+        }
+        .links {
+            margin-top: 10px;
+        }
+        .links a {
+            display: inline-block;
+            margin-right: 10px;
+            color: #0073b1;
+            text-decoration: none;
+        }
+        .content {
+            flex: 1;
         }
         .section {
             margin: 50px 0;
@@ -279,7 +296,12 @@ a:active {
             border-bottom: 2px solid #0073b1;
             padding-bottom: 5px;
             margin-bottom: 10px;
-            text-align: left;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        ul li {
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -295,108 +317,51 @@ a:active {
     </div>
 
     <div class="container">
-        <div class="header-name">Sanjoy Kundu</div>
-        <img src="\img\Sanjoy_headshot.jpeg" alt="Sanjoy Kundu" class="profile-photo">
-        <section>
-          <div class="section-title">Recent News</div>
-          <ul>
-            <li>July 2025 – Successfully defended my Ph.D. dissertation titled <strong>"Graph-Based Visual-Semantic Representations for Visual-Data Understanding"</strong>.</li>
-
-            <li>One paper accepted at <strong>ICCV 2025</strong>on egocentric video activity understaning in the open-world setting. You can find the preprint <a target="_blank" href="https://arxiv.org/pdf/2504.03948">here</a></li>
-
-            <li>We have a paper accepted at <strong>IEEE RA-L</strong>on embodied AI. You can find the preprint <a target="_blank" href="https://arxiv.org/pdf/2506.17516">here</a> and the projet link <a target="_blank" href="https://saakur.github.io/Projects/EASE/index.html">here.
-            Congrats to Zhou, the lead author on this paper!</a></li>
-
-            <li>Presented 3 papers at <strong>CVPR 2025</strong> workshops</li>
-
-            <li>June 2025 - I was recognized as an outstanding reviewer at <strong>CVPR 2025</strong>.</li>
-
-            <li>Our paper <strong>"ALGO"</strong> has been accepted at <strong>ECCV 2024</strong>. Read the paper <a target="_blank" href="https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/07629.pdf">here</a>.</li>
-
-            <li>Reviewed 4 papers for <strong>CVPR 2025</strong>.</li>
-
-            <li>Reviewed 4 papers for <strong>ICML 2024</strong></li>
-
-            <li>Summer 2024 – Joining <strong>NEC Laboratories America, Inc.</strong> as a research intern in the Machine Learning department. I will be working on one-shot egocentric video alignment and retrieval.</li>
-
-            <li>Served as an emergency reviewer for <strong>CVPR 2024</strong>.</li>
-
-            <li>Reviewed for <strong>ICLR 2024</strong>.</li>
-
-            <li>Transferred my Ph.D. program from Oklahoma State University to <a target="_blank" href="https://www.auburn.edu/">Auburn University</a>, Alabama, in Fall 2023. Exciting days ahead!</li>
-
-            <li>Reviewed 6 papers for <strong>NeurIPS 2023</strong>. <a target="_blank" href="https://nips.cc/">Conference link</a>.</li>
-
-            <li>Our paper on scene graph generation was accepted to <strong>CVPR 2023</strong>. Thanks to my advisor, Dr. Aakur, for his guidance and support. Preprint available <a target="_blank" href="https://arxiv.org/abs/2211.16636">here</a>.</li>
-
-            <li>Our work on open-world action recognition in egocentric videos was accepted to <strong>Pattern Recognition Letters</strong>. Co-authored with Dr. Aakur and Nikhil. <a target="_blank" href="https://authors.elsevier.com/c/1el8icAmypnDT">Link</a>.</li>
-
-            <li>Served as an external reviewer for <a target="_blank" href="https://icpr-conference.com/">ICPR 2022</a>.</li>
-
-            <li>Reviewed for <a target="_blank" href="https://cvpr2022.thecvf.com/">CVPR 2022</a>.</li>
-
-            <li>Reviewed for <a target="_blank" href="https://www.ieee-ras.org/publications/ra-l">RA-L</a>.</li>
-
-            <li>Awarded the <strong>Graduate College Robberson Summer 2021 Research and Creative Activity Grant</strong> by Oklahoma State University. <a target="_blank" href="https://gradcollege.okstate.edu/prospective-students/financing-your-graduate-education/graduate-fellowships/robberson_summer_fellowship.html">More info</a>.</li>
-
-            <li>First time as a reviewer: Reviewed one paper for <a target="_blank" href="https://2021.acmmm.org/">ACM Multimedia 2021</a>.</li>
-
-            <li>First paper of my Ph.D. accepted at <strong>AIPR 2020</strong>, on object detection in biomedical images. Read the paper <a target="_blank" href="https://www.researchgate.net/publication/351487799_Benchmark_and_Evaluation_of_Low_Resource_Object_Detection_in_Biomedical_Images">here</a>.</li>
-          </ul>
-        </section>
-        <div id="about" class="section">
-            <div class="section-title">About Me</div>
-            <p> I am a PhD candidate at the department of Computer Science and Software Engineering at Auburn Univiersity, under the supervison of <a  target="_blank"  href="https://saakur.github.io/">
-               Dr. Sathyanarayanan N. Aakur </a>.  I have completed my Bachelors degree in Electronincs and Communication Engineering from
-               <a  target="_blank"  href="https://kuet.ac.bd/">KUET</a>, Bangladesh.
-              <br/>
-              <br/> Currently, I am working in the group of <a target="_blank" href="https://saakur.github.io/group.html">
-               Open-ended Reasoning and Knowledge Acquisition (ORCA) Lab</a> led by <a  target="_blank"  href="https://saakur.github.io/"> Dr. Aakur</a>. My primary research interest is video event Understanding
-               using structured graphical representation and common-sense reasoning. I have worked on scene graph generation using generative graph transformer, open world event understanding
-               in ego-centric videos using neuoro-symbolic frameworks and probablistic search aprroaches. I am also working on procedure understaning in long multi-view procedural ego-centric
-               videos. Apart from scene and video understanding, I am also interested in generative AI, specially in video and image generation using diffusion models. I am also interested in
-               building solution for Real-World problems specially in the fields of Agriculture, marine life, eco-logical data, medical imaging etc. If you are interested in colaboration in any
-               of the areas, please feel free to reach out at sanjoykundu.ece@gmail.com.
+        <div class="sidebar">
+            <div class="header-name">Sanjoy Kundu</div>
+            <img src="/img/Sanjoy_headshot.jpeg" alt="Sanjoy Kundu" class="profile-photo">
+            <div class="links">
+                <a href="#">Google Scholar</a>
+                <a href="#">LinkedIn</a>
+            </div>
         </div>
 
-        <div id="projects" class="section">
-            <div class="section-title">Projects</div>
-            <p>Coming soon...</p>
-        </div>
+        <div class="content">
+            <section id="news" class="section">
+                <div class="section-title">Recent News</div>
+                <ul>
+                    <li>July 2025 – Successfully defended my Ph.D. dissertation titled <strong>"Graph-Based Visual-Semantic Representations for Visual-Data Understanding"</strong>.</li>
+                    <!-- Add more news items here -->
+                </ul>
+            </section>
 
-        <div id="publications" class="section">
-            <div class="section-title">Publications</div>
-            <p>
-              <ul>
-                <li> <a  target="_blank"  href="https://openaccess.thecvf.com/content/CVPR2023/papers/Kundu_IS-GGT_Iterative_Scene_Graph_Generation_With_Generative_Transformers_CVPR_2023_paper.pdf">   IS-GGT: Iterative Scene Graph Generation with Generative Transformers
-                </a> Sanjoy Kundu, Sathyanarayanan N. Aakur 	arXiv:2211.16636, 2022</li>
-                </br>
-              <li><a  target="_blank"  href="https://arxiv.org/abs/2009.07470Knowledge">  Knowledge Guided Learning: Towards Open Domain Egocentric Action Recognition with Zero Supervision.
-              </a> Sathyanarayanan N. Aakur, Sanjoy Kundu, Nikhil Gunti arXiv:2009.07470, 2020</li>
-            </br>
-              <li><a  target="_blank"  href="https://www.researchgate.net/publication/351487799_Benchmark_and_Evaluation_of_Low_Resource_Object_Detection_in_Biomedical_Images">Benchmark and Evaluation of Low Resource Object Detection in Biomedical Images</a>, Sanjoy   Kundu*, Nikhil Gunti*, Bailey Hendrickson*, Sunil More,
-                Sathyanarayanan Aakur IEEE Workshop on Applied Imagery and Pattern Recognition, 2020</li>
-              </br>
-                <li>	Anik Mallik and <strong>Sanjoy Kundu</strong>, “Design of a Novel Dual-Band Microstrip Patch Antenna Operating at 2.45 GHz and 2.84 GHz with Practical Implementation,” in Proc. IEEE ICCIT, 2014</li>
-                </br>
-                  <li>	Anik Mallik, <strong>Sanjoy Kundu</strong>, and Md. Osman Goni, “Gain and SAR improvement of a conventional patch antenna using a novel Pi-shaped DNG metamaterial,” in Proc. IEEE EICT, 2014.</li>
-                  </br>
-                    <li>	Anik Mallik, <strong>Sanjoy Kundu</strong>, and Md. Osman Goni, “Design of a Novel Two-Rectangular U-Shaped Double Negative Metamaterial,” in Proc. IEEE ICIEV, 2013</li>
-                    </br>
-                      <li>Anik Mallik, <strong>Sanjoy Kundu</strong>, and Md. Ashikur Rahman, <a  target="_blank"  href="https://arxiv.org/abs/2303.04716">“An FPGA-Based Semi-Automated Traffic Control System Using Verilog HDL </a>,” in Proc. ICECTE, 2012</li>
+            <div id="about" class="section">
+                <div class="section-title">About Me</div>
+                <p>[Your about me text here]</p>
+            </div>
 
-              </ul>
-            </p>
-        </div>
+            <div id="projects" class="section">
+                <div class="section-title">Projects</div>
+                <p>Coming soon...</p>
+            </div>
 
-        <div id="cv" class="section">
-            <div class="section-title">CV</div>
-            <p><a href="Files/Sanjoy_Academic_CV.pdf" target="_blank">Download CV</a></p>
-        </div>
+            <div id="publications" class="section">
+                <div class="section-title">Publications</div>
+                <ul>
+                    <li>Publication 1</li>
+                    <li>Publication 2</li>
+                </ul>
+            </div>
 
-        <div id="contact" class="section">
-            <div class="section-title">Contact</div>
-            <p>Email: szk0266[at]auburn[dot]edu</p>
+            <div id="cv" class="section">
+                <div class="section-title">CV</div>
+                <p><a href="Files/Sanjoy_Academic_CV.pdf" target="_blank">Download CV</a></p>
+            </div>
+
+            <div id="contact" class="section">
+                <div class="section-title">Contact</div>
+                <p>Email: szk0266[at]auburn[dot]edu</p>
+            </div>
         </div>
     </div>
 
