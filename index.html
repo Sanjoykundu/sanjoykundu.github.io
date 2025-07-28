@@ -303,8 +303,28 @@ a:active {
         ul li {
             margin-bottom: 10px;
         }
+
+        /* Custom additions for Recent News toggle */
+        #news ul {
+            font-size: 10pt;
+            max-height: 200px;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        #news ul.expanded {
+            max-height: none;
+        }
+        .show-toggle {
+            cursor: pointer;
+            color: #0073b1;
+            font-size: 10pt;
+            text-decoration: underline;
+            margin-top: 8px;
+            display: inline-block;
+        }
     </style>
 </head>
+
 <body>
 
     <div class="navbar">
@@ -382,6 +402,7 @@ a:active {
 
                     <li>First paper of my Ph.D. accepted at AIPR 2020, on object detection in biomedical images. Read the paper <a target="_blank" href="https://www.researchgate.net/publication/351487799_Benchmark_and_Evaluation_of_Low_Resource_Object_Detection_in_Biomedical_Images">here</a>.</li>
                 </ul>
+                <div class="show-toggle" onclick="toggleNews()">Show More</div>
             </section>
 
             <div id="about" class="section">
@@ -415,4 +436,18 @@ a:active {
     </div>
 
 </body>
+<script>
+    function toggleNews() {
+        const newsList = document.querySelector("#news ul");
+        const toggleBtn = document.querySelector(".show-toggle");
+
+        if (newsList.classList.contains("expanded")) {
+            newsList.classList.remove("expanded");
+            toggleBtn.textContent = "Show More";
+        } else {
+            newsList.classList.add("expanded");
+            toggleBtn.textContent = "Show Less";
+        }
+    }
+</script>
 </html>
